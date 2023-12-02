@@ -9,4 +9,4 @@ Requires Java11+ to run.
 mvn clean install -U
 ```
 
-**By Vinicius Colutti**
+**By Angela Tao**

@@ -1,17 +1,14 @@
-package com.colutti;
+package com.angelapytao;
 
 import org.junit.jupiter.api.Test;
-import org.reactivestreams.Subscription;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
-
-import java.util.Locale;
 
 public class MonoTest {
 
     @Test
     public void monoSubscriber(){
-        String name = "Vinicius Colutti";
+        String name = "HI, angelapytao";
         Mono<String> mono = Mono.just(name).log();
         mono.subscribe();
 
@@ -21,10 +18,10 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumer(){
-        String name = "Vinicius Colutti";
+    public void monoSuberscriberConsumer(){
+        String name = "Angela Tao";
         Mono<String> mono = Mono.just(name).log();
-        mono.subscribe(s -> System.out.println("Value: "+ s));
+        mono.subscribe(s -> System.out.println("Value: " + s));
 
         StepVerifier.create(mono)
                 .expectNext(name)
